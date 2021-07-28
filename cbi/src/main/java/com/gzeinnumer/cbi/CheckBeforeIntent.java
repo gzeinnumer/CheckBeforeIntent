@@ -7,31 +7,37 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CheckBeforeIntent {
 
     private boolean isSave = true;
     @SuppressLint("StaticFieldLeak")
-    static volatile CheckBeforeIntent singleton = null;
-    private final List<View> views;
-    private Context context;
+    private final ArrayList<View> views;
     private CheckBeforeIntentCallBack checkBeforeIntentCallBack;
 
-    public CheckBeforeIntent(Context context) {
-        this.context = context;
+    public CheckBeforeIntent() {
         this.views = new ArrayList<>();
-    }
-
-    public static CheckBeforeIntent with(Context context) {
-        synchronized (CheckBeforeIntent.class) {
-            singleton = new CheckBeforeIntent(context);
-        }
-        return singleton;
     }
 
     public CheckBeforeIntent addView(View view) {
         views.add(view);
+        return this;
+    }
+
+    public CheckBeforeIntent addView(View... view) {
+        views.addAll(Arrays.asList(view));
+        return this;
+    }
+
+    public CheckBeforeIntent addView(ArrayList<View> view) {
+        views.addAll(view);
+        return this;
+    }
+
+    public CheckBeforeIntent addView(List<View> view) {
+        views.addAll(view);
         return this;
     }
 
