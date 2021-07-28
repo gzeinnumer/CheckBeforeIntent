@@ -53,14 +53,17 @@ dependencies {
 ### Check Form Before Leave Activity
 
 Use `.addView(editText)` to add view that you want to check
+* Single View
 ```java
 new CheckBeforeIntent()
-    .addView(editText)
+    .addView(editText1)
     .isSaveToLeave(...).build();
 ```
-Full example
+
+Example
 ```java
-EditText editText = findViewById(R.id.ed);
+EditText editText1 = findViewById(R.id.ed1);
+EditText editText2 = findViewById(R.id.ed2);
 Button btn = findViewById(R.id.btn);
 
 btn.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +71,8 @@ btn.setOnClickListener(new View.OnClickListener() {
     public void onClick(View v) {
 
         new CheckBeforeIntent()
-                .addView(editText)
+                .addView(editText1)
+                .addView(editText2)
                 .isSaveToLeave(new CheckBeforeIntent.CheckBeforeIntentCallBack() {
                     @Override
                     public void isSaveToLeave(boolean isSave) {
@@ -81,6 +85,28 @@ btn.setOnClickListener(new View.OnClickListener() {
 
     }
 });
+```
+
+* Multiple View
+```java
+new CheckBeforeIntent()
+    .addView(editText1)
+    .addView(editText2)
+    .isSaveToLeave(...).build();
+```
+```java
+List<View> views = new ArrayList<>();
+...
+new CheckBeforeIntent()
+    .addView(views)
+    .isSaveToLeave(...).build();
+```
+```java
+View[] views = new View[size];
+...
+new CheckBeforeIntent()
+    .addView(views)
+    .isSaveToLeave(...).build();
 ```
 
 **FullCode**
