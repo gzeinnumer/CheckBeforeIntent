@@ -1,0 +1,3 @@
+include ':cbi'
+include ':app'
+rootProject.name = "CheckBeforeIntent"
