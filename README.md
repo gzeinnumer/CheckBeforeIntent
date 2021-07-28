@@ -50,7 +50,6 @@ dependencies {
 ---
 # Usage
 
-#
 ### Check Form Before Leave Activity
 
 Use `.addView(editText)` to add view that you want to check
@@ -63,6 +62,7 @@ Full example
 ```java
 EditText editText = findViewById(R.id.ed);
 Button btn = findViewById(R.id.btn);
+
 btn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
