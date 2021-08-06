@@ -1,5 +1,6 @@
-| <img src="https://github.com/gzeinnumer/CheckBeforeIntent/blob/master/preview/example1.gif" width="300"/> |
-|:--------------------------------------------------------------------------------------------------------------|
+<center>
+<img src="https://github.com/gzeinnumer/CheckBeforeIntent/blob/master/preview/example1.gif" width="300"/>
+</center>
 
 <h1 align="center">
     Check Before Intent - Check Form Before Leave Activity
