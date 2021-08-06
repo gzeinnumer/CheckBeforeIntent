@@ -1,4 +1,4 @@
-| <img src="https://github.com/gzeinnumer/AndroidFormValidation/blob/master/preview/example1.gif" width="300"/> |
+| <img src="https://github.com/gzeinnumer/CheckBeforeIntent/blob/master/preview/example1.gif" width="300"/> |
 |:--------------------------------------------------------------------------------------------------------------|
 
 <h1 align="center">
